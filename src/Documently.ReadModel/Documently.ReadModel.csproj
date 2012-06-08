@@ -75,6 +75,8 @@
     <Reference Include="System.Transactions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocumentMetaListDto.cs" />
+    <Compile Include="DocumentMetaListView.cs" />
     <Compile Include="CustomerAddressDto.cs" />
     <Compile Include="CustomerAddressView.cs" />
     <Compile Include="CustomerHasLivedInCitiesView.cs" />

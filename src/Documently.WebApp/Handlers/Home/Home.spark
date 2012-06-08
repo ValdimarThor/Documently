@@ -2,11 +2,14 @@
 <content:title>Documently Web App</content:title>
 <content:main>
 
-	<div id="menu">
-		<ul id="headerLinks">
-			<li>
-				<linkTo action="Documently.WebApp.Handlers.DocumentMetaData.GetHandler" method="Execute()">Create document</linkTo>
-			</li>
-		</ul>
-	</div>
+  <div id="menu">
+    <ul id="headerLinks">
+      <li>
+        <linkTo action="Documently.WebApp.Handlers.DocumentMetaData.GetHandler" method="Execute()">Create document</linkTo>
+      </li>
+      <li>
+        <linkTo action="Documently.WebApp.Handlers.DocumentList.GetHandler" method="Execute()">List documents</linkTo>
+      </li>
+    </ul>
+  </div>
 </content:main>

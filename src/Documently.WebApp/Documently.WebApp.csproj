@@ -151,6 +151,8 @@
     <Compile Include="App_Start\FubuMVC.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="ConfigureFubuMVC.cs" />
+    <Compile Include="Handlers\DocumentList\DocumentListModel.cs" />
+    <Compile Include="Handlers\DocumentList\GetHandler.cs" />
     <Compile Include="Handlers\DocumentMetaData\PostHandler.cs" />
     <Compile Include="Handlers\HandlersMarker.cs" />
     <Compile Include="Handlers\DocumentMetaData\DocumentMetaDataModel.cs" />
@@ -168,6 +170,7 @@
     <Content Include="fubu-content\fubumvc-diagnostics.zip" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Handlers\DocumentList\DocumentList.spark" />
     <None Include="Handlers\DocumentMetaData\DocumentMetaData.spark" />
     <None Include="Handlers\Home\Home.spark" />
     <None Include="Shared\Application.spark" />
@@ -183,6 +186,7 @@
       <Name>Documently.ReadModel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
