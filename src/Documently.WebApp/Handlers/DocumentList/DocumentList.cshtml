@@ -1,0 +1,34 @@
+﻿@using System.Diagnostics
+@using Documently.ReadModel
+@model Documently.WebApp.Handlers.DocumentList.DocumentListModel
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browse documents</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Create time
+            </th>
+        </tr>
+        @{
+            foreach (var doc in Model.Documents)
+            {
+            <tr>
+				<td>
+					@doc.Title
+				</td>
+				<td>
+					@doc.UtcDate
+				</td>
+            </tr>
+            }
+        }
+    </table>
+</body>
+</html>

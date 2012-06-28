@@ -1,0 +1,9 @@
+﻿@using Documently.WebApp.Handlers
+
+@model Documently.WebApp.Handlers.Home.HomeModel
+
+<h2>Documently Web App</h2>
+
+@(this.LinkTo<Documently.WebApp.Handlers.DocumentMetaData.GetHandler>(handler => handler.Execute()).Text("Create document"))
+@(this.LinkTo<Documently.WebApp.Handlers.DocumentList.GetHandler>(handler => handler.Execute()).Text("List documents"))
+

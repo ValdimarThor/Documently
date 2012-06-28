@@ -1,6 +1,6 @@
 using Documently.WebApp.Handlers;
 using FubuMVC.Core;
-using FubuMVC.Spark;
+using FubuMVC.Razor;
 
 namespace Documently.WebApp
 {
@@ -17,12 +17,12 @@ namespace Documently.WebApp
             //Routes.HomeIs<Documently.WebApp.Handlers.Home.GetHandler>(x => x.Execute());
             // Policies
             Routes
+				.HomeIs<Handlers.Home.GetHandler>(x => x.Execute())
                 .IgnoreControllerNamesEntirely()
                 .IgnoreMethodSuffix("Html")
-                .RootAtAssemblyNamespace()
-				.HomeIs<Handlers.Home.GetHandler>(x => x.Execute());
+                .RootAtAssemblyNamespace();
 
-            this.UseSpark();
+			Import<RazorEngineRegistry>();            
 
             // Match views to action methods by matching
             // on model type, view name, and namespace

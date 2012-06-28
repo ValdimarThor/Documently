@@ -1,10 +1,19 @@
-﻿namespace Documently.WebApp.Handlers.DocumentList
+﻿using Documently.ReadModel;
+
+namespace Documently.WebApp.Handlers.DocumentList
 {
     public class GetHandler
     {
-        public DocumentListModel Execute()
+    	readonly IReadRepository _repository;
+
+    	public GetHandler(IReadRepository repository)
+    	{
+    		_repository = repository;
+    	}
+
+    	public DocumentListModel Execute()
         {
-			return new DocumentListModel();
+			return new DocumentListModel(_repository);
         }
     }
 }

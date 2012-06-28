@@ -1,0 +1,24 @@
+﻿@using Documently.WebApp.Handlers.DocumentMetaData
+@model Documently.WebApp.Handlers.DocumentMetaData.DocumentMetaDataModel
+@(this.FormFor<Documently.WebApp.Handlers.DocumentMetaData.DocumentMetaDataModel>())
+<form id="mainForm" method="post" action="@(this.Urls.UrlFor<PostHandler>(handler => handler.Execute(Model)))">
+<div>
+    <p>
+        @this.LabelFor(m => m.Name)
+        @this.InputFor(m => m.Name)
+    </p>
+	<input type="submit" value="Create" />
+</div>
+</form>
+@*<form>
+	<div>
+		<p>
+			@this.LabelFor(m => m.Name)
+            @this.InputFor(m => m.Name)
+				
+			<!--<LabelFor model="DocumentMetaDataModel" property="Name" />
+				<InputFor model="DocumentMetaDataModel" property="Name" />-->
+		</p>
+	</div>
+	<input type="submit" value="Create" />
+</form>*@ 
